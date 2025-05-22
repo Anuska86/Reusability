@@ -5,8 +5,7 @@ import Button from './Components/Button.jsx';
 function App() {
   return (
     <main>
-      <Button text="Click here" />
-      {/* The concept of "children" is found everywhere in HTML! */}
+      <Button>Buy now!</Button>
       
       
     </main>
