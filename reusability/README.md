@@ -17,3 +17,7 @@ npm create vite@latest
 cd reusability
 npm install
 npm run dev
+
+
+MORE: 
+npm install react-icons
