@@ -1,20 +1,16 @@
 import React from "react";
+import classnames from "classnames";
 
-export default function Button({ children,size, ...restProps }) {
+export default function Button({ children, size, className, ...restProps }) {
   console.log(restProps);
 
-let sizeClass = "";
-if (size === "sm") {
-  sizeClass = "button-small";
-} else if (size === "lg") {
-  sizeClass = "button-large";
-}
+  let sizeClass = size ? `button-${size}` : "button-md";
+
+  const allClasses = classnames(sizeClass, className);
+  console.log(allClasses);
 
   return (
-    <button
-      className={sizeClass}
-      {...restProps}
-    >
+    <button className={allClasses} {...restProps}>
       {children}
     </button>
   );

@@ -9,7 +9,7 @@ function App() {
     <main>
       <Button
         size="lg"
-        style={{ color: "blue" }}
+        className="green"
         onClick={() => console.log("Loggin in with Google")}
       >
         <FcGoogle />
