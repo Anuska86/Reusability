@@ -1,12 +1,20 @@
 import React from "react";
 import classnames from "classnames";
 
-export default function Button({ children, size, className, ...restProps }) {
+export default function Button({
+  children,
+  size,
+  className,
+  variant,
+  ...restProps
+}) {
   console.log(restProps);
 
-  let sizeClass = size ? `button-${size}` : "button-md";
+  let sizeClass = size ? `button-${size}` : "";
 
-  const allClasses = classnames(sizeClass, className);
+  let variantClass = variant ? `button-${variant}` : "";
+
+  const allClasses = classnames(sizeClass, className, variantClass);
   console.log(allClasses);
 
   return (

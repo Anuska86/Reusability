@@ -9,7 +9,7 @@ function App() {
     <main>
       <Button
         size="lg"
-        className="green"
+        variant="warning"
         onClick={() => console.log("Loggin in with Google")}
       >
         <FcGoogle />
