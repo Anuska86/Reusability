@@ -8,6 +8,7 @@ function App() {
   return (
     <main>
       <Button
+        size="lg"
         style={{ color: "blue" }}
         onClick={() => console.log("Loggin in with Google")}
       >
