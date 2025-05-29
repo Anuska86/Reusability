@@ -4,15 +4,17 @@ import Button from "./Components/Button/Button.jsx";
 import { FaMoneyBill } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import Menu from "./Components/Menu/Menu.jsx";
+import MenuButton from "./Components/Menu/MenuButton.jsx";
+import MenuDropdown from "./Components/Menu/MenuDropdown.jsx";
 
 function App() {
   return (
-    <>
-      <Menu
-        buttonText="Videogames"
-        items={["The Legend of Zelda: Ocarina of Time ", "The Witcher 3: Wild Hunt", "Resident Evil Remake", "Super Smash Bros"," Final Fantasy VII"]}
-      ></Menu>
-    </>
+    <Menu>
+      <MenuButton>Videogames</MenuButton>
+      <MenuDropdown
+        items={["Action", "Adventure", "Puzzle", "Strategy", "RPG"]}
+      ></MenuDropdown>
+    </Menu>
   );
 }
 
