@@ -17,7 +17,7 @@ function App() {
       <MenuDropdown>
         {videogames.map((game, index) => (
           <MenuItem key={index}>
-            <Button variant="secondary" size="small">
+            <Button variant="secondary" size="sm">
               {game}
             </Button>
           </MenuItem>
