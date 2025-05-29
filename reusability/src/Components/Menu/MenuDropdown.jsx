@@ -1,18 +1,7 @@
 import React from "react"
 
-export default function MenuDropdown({ buttonText, items }) {
+export default function MenuDropdown({children }) {
     return (
-        <div className="menu-dropdown">
-            {items.map(
-                item => (
-                    <div
-                        className="menu-item"
-                        key={item}
-                    >
-                        {item}
-                    </div>
-                )
-            )}
-        </div>
+        <div>{children}</div>
     )
 }

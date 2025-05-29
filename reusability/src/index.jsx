@@ -6,14 +6,23 @@ import { FcGoogle } from "react-icons/fc";
 import Menu from "./Components/Menu/Menu.jsx";
 import MenuButton from "./Components/Menu/MenuButton.jsx";
 import MenuDropdown from "./Components/Menu/MenuDropdown.jsx";
+import MenuItem from "./Components/Menu/MenuItem.jsx";
 
 function App() {
+  const videogames = ["Action", "Adventure", "Puzzle", "Strategy", "RPG"];
+
   return (
     <Menu>
       <MenuButton>Videogames</MenuButton>
-      <MenuDropdown
-        items={["Action", "Adventure", "Puzzle", "Strategy", "RPG"]}
-      ></MenuDropdown>
+      <MenuDropdown>
+        {videogames.map((game, index) => (
+          <MenuItem key={index}>
+            <Button variant="secondary" size="small">
+              {game}
+            </Button>
+          </MenuItem>
+        ))}
+      </MenuDropdown>
     </Menu>
   );
 }
