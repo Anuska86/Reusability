@@ -1,7 +1,7 @@
-import React from "react"
+import React from "react";
 
-export default function MenuDropdown({children }) {
-    return (
-        <div>{children}</div>
-    )
+export default function MenuDropdown({ children, isOpen }) {
+  return (
+    <div>{isOpen ? <div className="menu-dropdown">{children}</div> : null}</div>
+  );
 }

@@ -1,9 +1,9 @@
-import react from "react";
+import React from "react";
 import Button from "../Button/Button.jsx";
 
-export default function MenuButton({ onClick, children }) {
+export default function MenuButton({ children, toggleMenu }) {
   return (
-    <Button variant="primary" size="lg " onClick={onClick}>
+    <Button variant="primary" size="lg " onClick={toggleMenu}>
       {children}
     </Button>
   );
