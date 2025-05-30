@@ -142,25 +142,26 @@ button.button-danger {
   color: #0c4a6e;
 }
 
-button.dark-theme {
+.dark {
   border: 1px solid #f0f9ff;
   background-color: #0c4a6e;
   color: #f0f9ff;
 }
 
-button.light-theme {
+.light {
   border: 1px solid #0c4a6e;
   background-color: #f0f9ff;
   color: #0c4a6e;
 }
 
-ThemeButton {
+.theme-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100px;
-  height: 40px;
+  width: 160px;
+  height: 60px;
   border-radius: 6px;
   cursor: pointer;
   padding: 10px;
+  margin-bottom: 20px;
 }

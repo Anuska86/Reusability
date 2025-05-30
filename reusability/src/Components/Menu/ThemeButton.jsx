@@ -13,7 +13,7 @@ export function ThemeProvider({ children }) {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className="theme-provider">{children}</div> {children}
+      <div className="theme-provider">{children}</div>
     </ThemeContext.Provider>
   );
 }
@@ -21,7 +21,11 @@ export function ThemeProvider({ children }) {
 export default function ThemeButton({ children }) {
   const { theme, toggleTheme } = useContext(ThemeContext);
   return (
-    <Button variant="primary" size="lg" onClick={toggleTheme}>
+    <Button
+      className="theme-button"
+      variant="primary"
+      onClick={toggleTheme}
+    >
       {children}{" "}
       {theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}
     </Button>

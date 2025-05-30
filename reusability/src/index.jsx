@@ -30,7 +30,7 @@ function App() {
           </MenuDropdown>
         </Menu>
       </div>
-      <ThemeButton>Switch theme</ThemeButton>
+      <ThemeButton></ThemeButton>
     </div>
   );
 }
