@@ -7,7 +7,8 @@ import Menu from "./Components/Menu/Menu.jsx";
 import MenuButton from "./Components/Menu/MenuButton.jsx";
 import MenuDropdown from "./Components/Menu/MenuDropdown.jsx";
 import MenuItem from "./Components/Menu/MenuItem.jsx";
-import { ThemeContext, ThemeProvider } from "./Components/Button/ThemeContext.jsx";
+import ThemeButton from "./Components/Menu/ThemeButton.jsx";
+import { ThemeProvider, ThemeContext } from "./Components/Menu/ThemeButton.jsx";
 
 function App() {
   const videogames = ["Action", "Adventure", "Puzzle", "Strategy", "RPG"];
@@ -15,21 +16,24 @@ function App() {
 
   return (
     <div className={`app-container ${theme}`}>
-      <Menu>
-        <MenuButton>Videogames</MenuButton>
-        <MenuDropdown>
-          {videogames.map((game, index) => (
-            <MenuItem key={index}>
-              <Button variant="secondary" size="sm">
-                {game}
-              </Button>
-            </MenuItem>
-          ))}
-        </MenuDropdown>
-      </Menu>
+      <div className="content">
+        <Menu>
+          <MenuButton>Videogames</MenuButton>
+          <MenuDropdown>
+            {videogames.map((game, index) => (
+              <MenuItem key={index}>
+                <Button variant="secondary" size="sm">
+                  {game}
+                </Button>
+              </MenuItem>
+            ))}
+          </MenuDropdown>
+        </Menu>
+      </div>
+      <ThemeButton>Switch theme</ThemeButton>
     </div>
   );
-} 
+}
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <ThemeProvider>
