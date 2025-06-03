@@ -6,7 +6,6 @@ export default function Menu({ children }) {
   const [isOpen, setIsOpen] = React.useState(true);
 
   function toggleMenu() {
-    console.log("Menu toggled");
     setIsOpen((prevIsOpen) => !prevIsOpen);
   }
 

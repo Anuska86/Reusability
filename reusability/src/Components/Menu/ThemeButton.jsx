@@ -2,7 +2,11 @@ import React from "react";
 import { createContext, useContext, useState } from "react";
 import Button from "../Button/Button.jsx";
 
-const ThemeContext = createContext();
+const ThemeContext = createContext({
+  theme: "light",
+  setTheme: () => {},
+  toggleTheme: () => {},
+});
 
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState("light");
@@ -12,7 +16,7 @@ export function ThemeProvider({ children }) {
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, setTheme, toggleTheme }}>
       <div className="theme-provider">{children}</div>
     </ThemeContext.Provider>
   );
@@ -21,11 +25,7 @@ export function ThemeProvider({ children }) {
 export default function ThemeButton({ children }) {
   const { theme, toggleTheme } = useContext(ThemeContext);
   return (
-    <Button
-      className="theme-button"
-      variant="primary"
-      onClick={toggleTheme}
-    >
+    <Button className="theme-button" variant="primary" onClick={toggleTheme}>
       {children}{" "}
       {theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}
     </Button>

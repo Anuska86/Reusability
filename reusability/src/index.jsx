@@ -14,6 +14,8 @@ function App() {
   const videogames = ["Action", "Adventure", "Puzzle", "Strategy", "RPG"];
   const { theme } = React.useContext(ThemeContext);
 
+
+
   return (
     <div className={`app-container ${theme}`}>
       <div className="content">

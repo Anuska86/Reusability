@@ -18,7 +18,7 @@ export default function Button({
   let themeCLass = theme === "dark" ? "button-dark" : "button-light";
 
   const allClasses = classnames(sizeClass, className, variantClass, themeCLass);
-  console.log(allClasses);
+  
 
   return (
     <button className={allClasses} {...restProps}>
