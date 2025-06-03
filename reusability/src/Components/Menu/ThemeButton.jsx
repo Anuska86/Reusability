@@ -2,7 +2,7 @@ import React from "react";
 import { createContext, useContext, useState } from "react";
 import Button from "../Button/Button.jsx";
 
-const ThemeContext = React.createContext();
+const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState("light");

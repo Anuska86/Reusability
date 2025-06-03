@@ -132,15 +132,6 @@ button.button-danger {
   flex: 1;
   display: flex;
 }
-.container.dark-theme {
-  background-color: #0c4a6e;
-  color: #f0f9ff;
-}
-
-.container.light-theme {
-  background-color: #f0f9ff;
-  color: #0c4a6e;
-}
 
 .dark {
   border: 1px solid #f0f9ff;
