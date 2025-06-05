@@ -115,6 +115,20 @@ button.button-danger {
   border-bottom: 1px solid #6b7280;
 }
 
+/* Star Rating Styles */
+.star {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  transition: color 0.5s ease-in-out;
+  user-select: none;
+  color: #0c4a6e;
+}
+
+.star.filled {
+  color: orange;
+}
+
 /* Dark and Light Theme Styles */
 .app-container {
   display: flex;
