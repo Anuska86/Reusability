@@ -1,28 +1,16 @@
 import React from "react";
+import Toggle from "../Toggle/ToggleIndex";
 
 const MenuContext = React.createContext();
 
 export default function Menu({ children }) {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const menuId = React.useId();
-
-  function toggleMenu() {
-    setIsOpen((prevIsOpen) => !prevIsOpen);
-  }
-
   return (
-    <MenuContext.Provider value={{ isOpen, toggleMenu, menuId }}>
+    <Toggle>
       <div className="menu" role="menu">
         {children}
       </div>
-    </MenuContext.Provider>
+    </Toggle>
   );
 }
 
 export { MenuContext };
-
-/* {React.Children.map(children, (child) => {
-          return React.cloneElement(child, {
-            isOpen,
-            toggleMenu,
-          }); */
