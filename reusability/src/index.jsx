@@ -3,33 +3,28 @@ import ReactDOM from "react-dom/client";
 import Button from "./Components/Button/Button.jsx";
 import { FaMoneyBill } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import Menu from "./Components/Menu/Menu.jsx";
-import MenuButton from "./Components/Menu/MenuButton.jsx";
-import MenuDropdown from "./Components/Menu/MenuDropdown.jsx";
-import MenuItem from "./Components/Menu/MenuItem.jsx";
 import ThemeButton from "./Components/Menu/ThemeButton.jsx";
 import { ThemeProvider, ThemeContext } from "./Components/Menu/ThemeButton.jsx";
+import Menu from "./Components/Menu/MenuIndex.jsx";
 
 function App() {
   const videogames = ["Action", "Adventure", "Puzzle", "Strategy", "RPG"];
   const { theme } = React.useContext(ThemeContext);
 
-
-
   return (
     <div className={`app-container ${theme}`}>
       <div className="content">
         <Menu>
-          <MenuButton>Videogames</MenuButton>
-          <MenuDropdown>
+          <Menu.Button>Videogames</Menu.Button>
+          <Menu.Dropdown>
             {videogames.map((game, index) => (
-              <MenuItem key={index}>
+              <Menu.Item key={index}>
                 <Button variant="secondary" size="sm">
                   {game}
                 </Button>
-              </MenuItem>
+              </Menu.Item>
             ))}
-          </MenuDropdown>
+          </Menu.Dropdown>
         </Menu>
       </div>
       <ThemeButton></ThemeButton>

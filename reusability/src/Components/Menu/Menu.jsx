@@ -1,6 +1,4 @@
 import React from "react";
-import MenuButton from "./MenuButton.jsx";
-import MenuDropdown from "./MenuDropdown.jsx";
 
 const MenuContext = React.createContext();
 
