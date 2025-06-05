@@ -1,18 +1,10 @@
 import React from "react";
+import { MenuContext } from "./Menu.jsx";
 
-export default function MenuDropdown({ children, isOpen, toggleMenu }) {
+export default function MenuDropdown({ children }) {
+  const { isOpen, toggleMenu } = React.useContext(MenuContext);
+
   return (
-    <div>
-      {isOpen ? (
-        <div className="menu-dropdown">
-          {React.Children.map(children, (child) => {
-            return React.cloneElement(child, {
-              toggleMenu,
-              isOpen,
-            });
-          })}
-        </div>
-      ) : null}
-    </div>
+    <div>{isOpen ? <div className="menu-dropdown">{children}</div> : null}</div>
   );
 }

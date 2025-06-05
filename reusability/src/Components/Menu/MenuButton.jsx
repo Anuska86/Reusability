@@ -2,7 +2,9 @@ import React from "react";
 import Button from "../Button/Button.jsx";
 import { MenuContext } from "./Menu.jsx";
 
-export default function MenuButton({ children, toggleMenu,isOpen }) {
+export default function MenuButton({ children }) {
+  const { isOpen, toggleMenu } = React.useContext(MenuContext);
+
   return (
     <Button variant="primary" size="lg " onClick={toggleMenu}>
       {children}

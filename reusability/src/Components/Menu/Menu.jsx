@@ -13,16 +13,15 @@ export default function Menu({ children }) {
 
   return (
     <MenuContext.Provider value={{ isOpen, toggleMenu }}>
-      <div className="menu">
-        {React.Children.map(children, (child) => {
-          return React.cloneElement(child, {
-            isOpen,
-            toggleMenu,
-          });
-        })}
-      </div>
+      <div className="menu">{children}</div>
     </MenuContext.Provider>
   );
 }
 
 export { MenuContext };
+
+/* {React.Children.map(children, (child) => {
+          return React.cloneElement(child, {
+            isOpen,
+            toggleMenu,
+          }); */
