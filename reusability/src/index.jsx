@@ -6,7 +6,6 @@ import { FcGoogle } from "react-icons/fc";
 import ThemeButton from "./Components/Menu/ThemeButton.jsx";
 import { ThemeProvider, ThemeContext } from "./Components/Menu/ThemeButton.jsx";
 import Menu from "./Components/Menu/MenuIndex.jsx";
-import Toggle from "./Components/Toggle/ToggleIndex.jsx";
 import Star from "./Components/Star.jsx";
 
 function App() {
@@ -20,7 +19,7 @@ function App() {
       <br />
 
       <div className="content">
-        <Menu>
+        <Menu onOpen={() => console.log("Menu opened")}>
           <Menu.Button>Menu</Menu.Button>
 
           <Menu.Dropdown>
