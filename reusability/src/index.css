@@ -123,6 +123,7 @@ button.button-danger {
   transition: color 0.5s ease-in-out;
   user-select: none;
   color: #0c4a6e;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .star.filled {

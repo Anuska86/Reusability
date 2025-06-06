@@ -6,12 +6,15 @@ export default function Star({ onChange }) {
   return (
     <Toggle value={false} onToggle={onChange}>
       <Toggle.Button>
-        <Toggle.On>
-          <BsStarFill className="star filled" />
-        </Toggle.On>
-        <Toggle.Off>
-          <BsStar className="star" />
-        </Toggle.Off>
+        <Toggle.Display>
+          {(on) =>
+            on ? (
+              <BsStarFill className="star filled" />
+            ) : (
+              <BsStar className="star" />
+            )
+          }
+        </Toggle.Display>
       </Toggle.Button>
     </Toggle>
   );
