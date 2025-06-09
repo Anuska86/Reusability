@@ -1,23 +1,15 @@
 import React, { useEffect } from "react";
+import useEffectOnUpdate from "../../Hooks/useEffectOnUpdate";
+import useToggle from "../../Hooks/useToggle";
 
 const ToggleContext = React.createContext();
 
 export default function Toggle({ children, onToggle = () => {} }) {
   //noop function that does nothing by default
-  const [on, setOn] = React.useState(false);
-  const firstRender = React.useRef(true);
+  const [on, toggle] = useToggle();
 
-  function toggle() {
-    setOn((prevOn) => !prevOn);
-    console.log("Toggled!");
-  }
-
-  useEffect(() => {
-    if (firstRender.current) {
-      firstRender.current = false;
-    } else {
-      onToggle();
-    }
+  useEffectOnUpdate(() => {
+    onToggle();
   }, [on]);
 
   return (
