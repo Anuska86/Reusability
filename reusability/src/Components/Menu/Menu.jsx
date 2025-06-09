@@ -1,12 +1,14 @@
 import React from "react";
 import Toggle from "../Toggle/ToggleIndex";
+import useToggle from "../../Hooks/useToggle";
 
-export default function Menu({ children,onOpen }) {
+export default function MenuContainer() {
+  const [open, toggleOpen] = useToggle();
+
   return (
-    <Toggle value={false} onToggle={onOpen}>
-      <div className="menu" role="menu">
-        {children}
-      </div>
-    </Toggle>
+    <div>
+      <button onClick={toggleOpen}>Toggle Menu</button>
+      {open && <div className="menu-content">Menu is open</div>}
+    </div>
   );
 }
