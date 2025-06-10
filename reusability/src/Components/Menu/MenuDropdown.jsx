@@ -1,12 +1,8 @@
 import React from "react";
-import Toggle from "../Toggle/ToggleIndex.jsx";
+import { MenuContext } from "./Menu.jsx";
 
 export default function MenuDropdown({ children }) {
-  return (
-    <Toggle.On>
-      <div className="menu-dropdown" aria-controls="menuId">
-        {children}
-      </div>
-    </Toggle.On>
-  );
+  const { open, toggleOpen } = React.useContext(MenuContext);
+
+  return <>{open ? <div className="menu-dropdown">{children}</div> : null}</>;
 }
