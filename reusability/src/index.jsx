@@ -19,7 +19,7 @@ function App() {
       <br />
 
       <div className="content">
-        <Menu onOpen={() => console.log("Menu opened")}>
+        <Menu onOpen={() => console.log("Menu opened/closed")}>
           <Menu.Button>Menu</Menu.Button>
 
           <Menu.Dropdown>
