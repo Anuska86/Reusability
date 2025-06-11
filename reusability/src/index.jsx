@@ -3,8 +3,8 @@ import ReactDOM from "react-dom/client";
 import Button from "./Components/Button/Button.jsx";
 import { FaMoneyBill } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import ThemeButton from "./Components/Menu/ThemeButton.jsx";
-import { ThemeProvider, ThemeContext } from "./Components/Menu/ThemeButton.jsx";
+import ThemeButton from "./Components/Button/ThemeButton.jsx";
+import { ThemeProvider, ThemeContext } from "./Components/Button/ThemeButton.jsx";
 import Menu from "./Components/Menu/MenuIndex.jsx";
 import Star from "./Components/Star.jsx";
 

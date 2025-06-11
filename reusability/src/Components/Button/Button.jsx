@@ -1,6 +1,6 @@
 import React from "react";
 import classnames from "classnames";
-import { ThemeContext } from "../Menu/ThemeButton";
+import { ThemeContext } from "./ThemeButton";
 
 export default function Button({
   children,
